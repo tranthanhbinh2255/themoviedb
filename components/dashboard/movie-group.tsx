@@ -15,6 +15,11 @@ const MovieGroup: React.FC<{}> = ({}) => {
 
   const onPageChange = (e, { activePage }) => {
     setCurrentPage(activePage)
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
   }
 
   return (
