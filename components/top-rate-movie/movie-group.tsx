@@ -66,11 +66,10 @@ const MovieGroup: React.FC<{}> = ({}) => {
           <h1
             className="ui center aligned header column"
             style={{
-              marginTop: '1em'
+              marginTop: '1em',
             }}
           >
             TOP RATED MOVIE
-
           </h1>
         </div>
         <div className="ui container grid">
