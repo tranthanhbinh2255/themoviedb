@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Header } from 'semantic-ui-react'
 import { ListMovieItemsModel } from '../../models/list-movie-items.model'
 import { getTopRateMovie } from '../../utils/movie-api'
 import AppPagination from '../layout/pagination'
@@ -18,14 +19,14 @@ const MovieGroup: React.FC<{}> = ({}) => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     })
   }
 
   return (
     listMovive && (
       <div>
-        <h3 className="ui center aligned header">TOP RATE MOVIE</h3>
+        <h1 className="ui center aligned header">TOP RATE MOVIE</h1>
         <div className="ui fluid container">
           <MovieListCards movieItems={listMovive.results} />
           <div className="ui grid container">

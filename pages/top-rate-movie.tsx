@@ -1,10 +1,10 @@
 import { NextPage } from 'next'
 import React, { useEffect, useState } from 'react'
-import BigBanner from '../components/dashboard/big-banner'
-import MovieListGroups from '../components/dashboard/movie-list-groups'
+import BigBanner from '../components/top-rate-movie/big-banner'
+import MovieListGroups from '../components/top-rate-movie/movie-list-groups'
 import { proceedAuthentication } from '../utils/movie-utils'
 
-const Dashboard: NextPage = ({ ...props }) => {
+const TopRateMovie: NextPage = ({ ...props }) => {
   const [accessToken, setAccessToken] = useState(null)
 
   useEffect(async () => {
@@ -27,4 +27,4 @@ const Dashboard: NextPage = ({ ...props }) => {
     )
   )
 }
-export default Dashboard
+export default TopRateMovie

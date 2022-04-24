@@ -7,7 +7,7 @@ interface Props {
 }
 
 const MovieListCards: React.FC<Props> = ({ movieItems }) => (
-  <div className="doubling stackable ui three column grid container special cards">
+  <div className="doubling stackable ui four column grid container special cards">
     {movieItems.map((mv) => (
       <MovieCard movie={mv} />
     ))}
