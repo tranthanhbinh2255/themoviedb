@@ -27,7 +27,7 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
 
   useEffect(() => {
     setMovieRate(retrieveMovieRate())
-  }, [])
+  }, [movie.id])
 
   const storeSelectedMovie = (rating: number) => {
     let ratedMovies: any[] = getAppCookie(STORAGE_KEY.RATED_MOVIES) || []
