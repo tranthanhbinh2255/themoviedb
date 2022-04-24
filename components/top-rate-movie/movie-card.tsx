@@ -77,10 +77,11 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
           <Card.Meta>
             <p className="date">{movie.release_date}</p>
           </Card.Meta>
-          {/* <Card.Description>{movie.overview}</Card.Description> */}
         </Card.Content>
         <Card.Content extra>
-          <span className="right floated">Rating {movie.vote_average}</span>
+          <span className="right floated">
+            {`Rating ${movie.vote_average}`}
+          </span>
           <a>
             <Rating
               icon="star"
