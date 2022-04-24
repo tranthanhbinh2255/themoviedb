@@ -5,8 +5,10 @@ interface Props {
   title: string
 }
 
-const Layout: React.FC<Props> = ({ title }) => {
-  return <div className={styles.layout}>{title}</div>
-}
+const Layout: React.FC<Props> = ({ title }) => (
+  <>
+    <div className={`${styles.layout} ui fluid container`}>{title}</div>
+  </>
+)
 
 export default Layout

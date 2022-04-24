@@ -6,16 +6,22 @@
     "start": "next start"
   },
   "dependencies": {
+    "cookies-next": "^2.0.4",
     "next": "latest",
+    "pure-react-carousel": "^1.28.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "^1.50.1"
+    "sass": "^1.50.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.2"
   },
   "devDependencies": {
+    "@types/cookie": "^0.5.1",
     "@types/node": "^17.0.25",
     "@types/react": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
+    "cookie": "^0.5.0",
     "eslint": "^8.13.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "12.0.7",
