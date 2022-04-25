@@ -16,10 +16,6 @@ const BigBanner: React.FC<any> = () => (
             marginTop: '2em',
           }}
         />
-        <Button primary size="huge">
-          Get Started
-          <Icon name="arrow right" />
-        </Button>
       </Container>
     </Segment>
   </>

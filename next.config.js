@@ -4,7 +4,7 @@ module.exports = {
     return [
       {
         source: '/',
-        destination: '/top-rate-movie',
+        destination: '/top-rated-movie',
         permanent: true,
       },
     ]
