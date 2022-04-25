@@ -12,10 +12,13 @@ const MovieGroup: React.FC<{}> = ({}) => {
   const [movieListing, setMovieListing] = useState<MovieItemModel[]>([])
   const [order, setOrder] = useState<string>('')
 
-  useEffect(async () => {
-    const movieGroup = await getTopRateMovie(currentPage)
-    setListMovie(movieGroup)
-    setMovieListing([...movieGroup.results])
+  useEffect(() => {
+    const getTopRated = async () => {
+      const movieGroup = await getTopRateMovie(currentPage)
+      setListMovie(movieGroup)
+      setMovieListing([...movieGroup.results])
+    }
+    getTopRated()
   }, [currentPage])
 
   const onPageChange = (e, { activePage }) => {

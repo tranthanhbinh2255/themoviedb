@@ -14,9 +14,12 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
   const [movieConfig, setMovieConfig] = useState(null)
   const [movieRate, setMovieRate] = useState(0)
 
-  useEffect(async () => {
-    const configuration = await getMovieConfiguration()
-    setMovieConfig(configuration)
+  useEffect(() => {
+    const getConfiguration = async () => {
+      const configuration = await getMovieConfiguration()
+      setMovieConfig(configuration)
+    }
+    getConfiguration()
   }, [])
 
   const retrieveMovieRate = () => {

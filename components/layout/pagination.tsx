@@ -4,7 +4,7 @@ import { Grid, Pagination } from 'semantic-ui-react'
 interface Props {
   activePage: number
   totalPage: number
-  onPageChange(e, { activePage }): void
+  onPageChange(e, data): void
 }
 
 const AppPagination: React.FC<Props> = ({

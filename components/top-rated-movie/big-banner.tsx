@@ -18,7 +18,7 @@ const BigBanner: React.FC<any> = () => (
         />
         <Button primary size="huge">
           Get Started
-          <Icon name="right arrow" />
+          <Icon name="arrow right" />
         </Button>
       </Container>
     </Segment>
