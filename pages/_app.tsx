@@ -1,9 +1,9 @@
-import React from 'react'
-import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import Header from '../layout/header/header'
+import React from 'react'
 import Body from '../layout/body/body'
+import Header from '../layout/header/header'
+import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +16,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <Body>
-        <Component {...pageProps} />
+        <Component
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          {...pageProps}
+        />
       </Body>
     </>
   )
