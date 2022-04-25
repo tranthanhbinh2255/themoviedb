@@ -38,6 +38,8 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error'],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
+    'operator-linebreak': ['error', 'after'],
+    'object-curly-newline': ['error', { 'multiline': true }],
   },
   settings: {
     'import/resolver': {

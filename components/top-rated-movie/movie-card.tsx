@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {
-  Button,
-  Card,
-  Dimmer,
-  Image,
-  Rating,
-} from 'semantic-ui-react'
+import { Button, Card, Dimmer, Image, Rating } from 'semantic-ui-react'
 
 import { MovieItemModel } from '../../models/movie-item.model'
 import { STORAGE_KEY } from '../../utils/constants'
@@ -57,9 +51,10 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
   }
 
   const getImageUrl = (imagePath) => {
-    const baseUrl = movieConfig?.images?.base_url
-    || movieConfig?.images?.secure_base_url
-    || ''
+    const baseUrl =
+      movieConfig?.images?.base_url ||
+      movieConfig?.images?.secure_base_url ||
+      ''
     if (!baseUrl) return ''
     return `${movieConfig?.images?.base_url}/original${imagePath}`
   }
