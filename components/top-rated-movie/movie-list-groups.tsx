@@ -1,7 +1,7 @@
 import React from 'react'
 import MovieGroup from './movie-group'
 
-const MovieListGroups: React.FC<{}> = ({}) => (
+const MovieListGroups: React.FC<any> = () => (
   <div>
     <MovieGroup />
   </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container, Header, Icon, Segment } from 'semantic-ui-react'
+import { Container, Header, Segment } from 'semantic-ui-react'
 
 const BigBanner: React.FC<any> = () => (
   <>

@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Dimmer, Rating, Image, Card } from 'semantic-ui-react'
+import {
+  Button,
+  Card,
+  Dimmer,
+  Image,
+  Rating,
+} from 'semantic-ui-react'
+
 import { MovieItemModel } from '../../models/movie-item.model'
 import { STORAGE_KEY } from '../../utils/constants'
 import { getMovieConfiguration } from '../../utils/movie-utils'
@@ -40,6 +47,7 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
     if (!rating) {
       ratedMovies = ratedMovies.filter((mv) => mv.id !== movie.id)
     }
+
     setAppCookie(STORAGE_KEY.RATED_MOVIES, ratedMovies)
   }
 
@@ -49,10 +57,9 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
   }
 
   const getImageUrl = (imagePath) => {
-    const baseUrl =
-      movieConfig?.images?.base_url ||
-      movieConfig?.images?.secure_base_url ||
-      ''
+    const baseUrl = movieConfig?.images?.base_url
+    || movieConfig?.images?.secure_base_url
+    || ''
     if (!baseUrl) return ''
     return `${movieConfig?.images?.base_url}/original${imagePath}`
   }

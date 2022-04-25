@@ -4,7 +4,7 @@ import BigBanner from '../components/top-rated-movie/big-banner'
 import MovieListGroups from '../components/top-rated-movie/movie-list-groups'
 import { proceedAuthentication } from '../utils/movie-utils'
 
-const TopRateMovie: NextPage = ({ ...props }) => {
+const TopRateMovie: NextPage = () => {
   const [accessToken, setAccessToken] = useState(null)
 
   useEffect(() => {

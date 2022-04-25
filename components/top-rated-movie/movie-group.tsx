@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Header, Select } from 'semantic-ui-react'
+import { Select } from 'semantic-ui-react'
 import { ListMovieItemsModel } from '../../models/list-movie-items.model'
 import { MovieItemModel } from '../../models/movie-item.model'
 import { getTopRateMovie } from '../../utils/movie-api'
 import AppPagination from '../layout/pagination'
 import MovieListCards from './move-list-cards'
 
-const MovieGroup: React.FC<{}> = ({}) => {
+const MovieGroup: React.FC<any> = () => {
   const [listMovie, setListMovie] = useState<ListMovieItemsModel>(null)
   const [currentPage, setCurrentPage] = useState(1)
   const [movieListing, setMovieListing] = useState<MovieItemModel[]>([])
@@ -42,7 +42,6 @@ const MovieGroup: React.FC<{}> = ({}) => {
 
   const handleOrderChange = () => {
     let currMovie = listMovie ? [...listMovie.results] : []
-
     const sortDirection = order.split('-')[1]
     if (sortDirection) {
       currMovie = [...listMovie.results].sort((prevMv, nextMv) => {
